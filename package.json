@@ -1,0 +1,12 @@
+{
+  "name": "knockout-spike",
+  "version": "1.0.0",
+  "description": "showcase of knockout.js",
+  "main": "index.js",
+  "repository": "https://github.com/Volumental/knockout-spike",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
