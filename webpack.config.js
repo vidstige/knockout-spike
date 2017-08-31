@@ -4,6 +4,9 @@ module.exports = {
     entry: {
         bundle: ["./index.js"]
     },
+    externals: {
+		'ko': 'ko'
+    },
     output: {
         path: path.resolve(__dirname, "build"),
         publicPath: "/build/",
