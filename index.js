@@ -16,6 +16,12 @@ function ViewModel() {
 
 window.loaded = function() {
     var ko = require('ko');
+    /*ko.components.register('message-editor', {
+        viewModel: function(params) {
+            this.text = ko.observable(params && params.initialText || 'hi there');
+        },
+        template: require('html-loader!./components/message-editor.html')
+    });*/
     ko.applyBindings(new ViewModel());
 };
 
