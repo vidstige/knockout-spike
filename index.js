@@ -18,3 +18,5 @@ window.loaded = function() {
     var ko = require('ko');
     ko.applyBindings(new ViewModel());
 };
+
+module.exports = {ViewModel};
