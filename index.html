@@ -9,8 +9,15 @@
   <!-- TODO: Use webpack properly -->
   <script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-min.js"></script>
   
-  <p>First name: <strong data-bind="text: firstName"></strong></p>
-  <p>Last name: <strong data-bind="text: lastName"></strong></p>
+  <input type="text"/ data-bind="value: firstName">
+  <input type="text"/ data-bind="value: lastName">
+  <button data-bind="click: add">Add</button>
+
+  <ul data-bind="foreach: items">
+    <p>First name: <strong data-bind="text: firstName"></strong></p>
+    <p>Last name: <strong data-bind="text: lastName"></strong></p>
+    <button data-bind="click: remove">x</button>
+  </ul>
 
 </body>
 </html>
