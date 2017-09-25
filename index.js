@@ -1,3 +1,5 @@
+var ko = require('knockout');
+
 function ViewModel() {
     var thiz = this;
     this.firstName = "Foo";
@@ -15,7 +17,6 @@ function ViewModel() {
 }
 
 window.loaded = function() {
-    var ko = require('ko');
     /*ko.components.register('message-editor', {
         viewModel: function(params) {
             this.text = ko.observable(params && params.initialText || 'hi there');

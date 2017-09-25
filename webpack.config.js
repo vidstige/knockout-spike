@@ -4,9 +4,6 @@ module.exports = {
     entry: {
         bundle: ["./index.js"]
     },
-    externals: {
-		'ko': 'ko'
-    },
     output: {
         path: path.resolve(__dirname, "build"),
         publicPath: "/build/",
@@ -14,6 +11,10 @@ module.exports = {
     },
     module: {
         loaders: [
+            {
+                test: /knockout.build.output.knockout-latest\.js/,
+                loader: "imports?require=>false"
+            },
             // Extract css files
             {
                 test: /\.css$/,
