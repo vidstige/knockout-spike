@@ -7,16 +7,23 @@
 <body onload="loaded()">
   <script src="build/bundle.js"></script>
   
-  <input type="text" data-bind="value: firstName">
-  <input type="text" data-bind="value: lastName">
+  <input type="text" data-bind="textInput: firstName">
+  <input type="text" data-bind="textInput: lastName">
+  <p data-bind="text: fullName"></p>
   <button data-bind="click: add">Add</button>
+  <input type="text" data-bind="textInput: search">
 
-  <!-- <div data-bind="component: 'message-editor'">will get erased</div> -->
-
-  <ul data-bind="foreach: items">
+  <div data-bind="component: 'message-editor'">will get erased</div>
+  
+  <ul data-bind="foreach: items" style="float: left;">
     <p>First name: <strong data-bind="text: firstName"></strong></p>
     <p>Last name: <strong data-bind="text: lastName"></strong></p>
     <button data-bind="click: remove">x</button>
+  </ul>
+
+  
+  <ul data-bind="foreach: filtered" style="float: right;">
+    <p>First name: <strong data-bind="text: firstName"></strong></p>
   </ul>
 
 </body>
